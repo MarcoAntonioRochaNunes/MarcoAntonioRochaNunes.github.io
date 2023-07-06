@@ -1,0 +1,52 @@
+.intro {
+  align-items: center;
+}
+.intro h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  position: relative;
+}
+.intro h1::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 68px;
+  background: url("../img/Vector-lobo.svg");
+  position: absolute;
+  top: 0px;
+  left: -50px;
+}
+.intro p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+@media (max-width: 1000px) {
+  .intro h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 800px) {
+  .intro {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .intro h1 {
+    font-size: 2rem;
+  }
+  .intro h1::before {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+  .intro img {
+    display: none;
+  }
+}
